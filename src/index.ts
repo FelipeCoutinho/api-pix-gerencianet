@@ -52,9 +52,6 @@ app.get('/', (req, res) => {
         'Content-Type':'application/json'
       }
     })
-
-    // const cob  = `${process.env.ENDPOINT}/v2/cob`
-
     const data = {
       "calendario": {
         "expiracao": 3600
@@ -66,15 +63,9 @@ app.get('/', (req, res) => {
       "solicitacaoPagador": "Informe o número ou identificador do pedido."
     }
 
-    // const config:AxiosRequestConfig = {
-    //   httpsAgent:agent,
-    //   headers:{
-    //     "Authorization":`Bearer ${acessToken}`,
-    //     'Content-Type':'application/json'
-    //   }
-    // }
     request.post('/v2/cob',data).then( response =>{
         // res.status('200').json()
+        
     })
 
   })
